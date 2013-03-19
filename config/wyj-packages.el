@@ -31,9 +31,9 @@
 
 
 ;;yasnippet
-;; (require 'yasnippet)
-;; (yas--initialize)
-;; (yas-load-directory "~/.emacs.d/elpa/yasnippet-0.8.0/snippets")
+(require 'yasnippet)
+(yas--initialize)
+(yas-load-directory "~/.emacs.d/elpa/yasnippet-0.8.0/snippets")
 ;; 和emacs-for-python里的yasnippet冲突，暂时注掉
 ;; Sat Jan 26 00:50:16 2013
 

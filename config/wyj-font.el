@@ -9,13 +9,13 @@
  "-outline-Consolas-bold-normal-normal-mono-13-*-*-*-c-*-fontset-Consolas")
 
 (cond 
- (wyj/host:HOMEp
+ (wyj/host:OFFICEp
   (set-fontset-font "fontset-Consolas" 'ascii "文泉驿等宽微米黑-12" nil 'prepend))
  (t
   (wyj/log:message "wyj-font: Not registered host. Need update font setting for 'ascii charset.")))
 
 (cond
- (wyj/host:HOMEp
+ (wyj/host:OFFICEp
   (set-fontset-font "fontset-Consolas" 'han "Microsoft YaHei-12" nil 'prepend)
   (set-fontset-font "fontset-Consolas" 'kana "MS Gothic-12" nil 'prepend))
  (t
