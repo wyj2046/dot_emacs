@@ -8,15 +8,15 @@
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
 ;; el-get必须上网才能使？
-;; (unless (require 'el-get nil 'noerror)
-;;   (with-current-buffer
-;;       (url-retrieve-synchronously
-;;        "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-;;     (goto-char (point-max))
-;;     (eval-print-last-sexp)))
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
 
 
-;; (el-get 'sync)
+(el-get 'sync)
 
 
 ;; golden-ratio
@@ -30,5 +30,5 @@
 ;; jedi
 ;; http://tkf.github.com/emacs-jedi/
 ;; 擦，还不知道怎么玩
-(setq jedi:setup-keys t)
-(add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:setup-keys t)
+;; (add-hook 'python-mode-hook 'jedi:setup)
