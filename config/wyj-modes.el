@@ -80,4 +80,10 @@
   (c-set-offset 'arglist-close 0))
 (add-hook 'php-mode-hook 'wicked/php-mode-init)
 
+
+;; flymake-php
+(require 'flymake-php)
+(add-hook 'php-mode-hook 'flymake-php-load)
+
+
 (provide 'wyj-modes)
