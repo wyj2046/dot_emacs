@@ -1,0 +1,6 @@
+[submodule "el-get"]
+	path = el-get
+	url = git://github.com/dimitri/el-get.git
+[submodule "emacs-for-python"]
+	path = emacs-for-python
+	url = git://github.com/gabrielelanaro/emacs-for-python.git
