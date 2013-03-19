@@ -14,7 +14,7 @@
 (load "wyj-modes")
 (load "wyj-elisp")
 (load "wyj-misc")
-;; (load "wyj-elget")
+(load "wyj-elget")
 
 (when (require 'time-date nil t)
   (message "Emacs startup time: %d seconds."
