@@ -1,0 +1,37 @@
+;; -*- coding: utf-8 -*-
+(setq emacs-load-start-time (current-time))
+
+
+;; 在Win下要配置环境变量
+(setenv "HOME" "D:/emacs-24.2")
+(setenv "PATH" "D:/emacs-24.2")
+
+
+;; set the default file path
+(setq default-directory "~/")
+
+;; load base settings
+(add-to-list 'load-path "~/.emacs.d/config")
+
+
+;; --------------------
+;; win下所需
+(load "wyj-font")
+(load "wyj-key")
+;; --------------------
+
+
+(load "wyj-basic")
+(load "wyj-ui")
+(load "wyj-mode-line")
+(load "wyj-packages")
+(load "wyj-modes")
+(load "wyj-elisp")
+(load "wyj-misc")
+(load "wyj-elget")
+
+
+(when (require 'time-date nil t)
+  (message "Emacs startup time: %d seconds."
+	   (time-to-seconds (time-since emacs-load-start-time)))
+  )
