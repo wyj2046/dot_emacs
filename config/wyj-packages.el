@@ -228,3 +228,9 @@ the mode-line."
 ;; (load-file "~/.emacs.d/plugins/cedet-1.1/common/cedet.el")
 (wyj/plugin:prepend-to-load-path "weibo")
 (require 'weibo)
+
+
+;; nxhtml
+;; http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html
+(wyj/plugin:prepend-to-load-path "nxhtml")
+(load "autostart.el")
