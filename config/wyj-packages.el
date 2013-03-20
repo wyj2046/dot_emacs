@@ -232,5 +232,5 @@ the mode-line."
 
 ;; nxhtml
 ;; http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html
-(wyj/plugin:prepend-to-load-path "nxhtml")
-(load "autostart.el")
+;; (wyj/plugin:prepend-to-load-path "nxhtml")
+;; (load "autostart.el")
