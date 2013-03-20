@@ -81,6 +81,25 @@
 (add-hook 'php-mode-hook 'wicked/php-mode-init)
 
 
+;; 参考网址http://my.oschina.net/u/874560/blog/91955 第8部分
+;; win7在emacs里运行php
+(defun php-run ()
+  (interactive)
+  (message buffer-file-name)
+  (shell-command
+   (concat "D:/www/PHP/php.exe -f \""
+	   (buffer-file-name)
+	   "\"")))
+;;这里是绑定函数到快捷键C+c r
+(defun my-php-mode()
+  (define-key php-mode-map [(control c) (r)] 'php-run)
+  ;; (define-key php-mode-map [(control c) (d)] 'php-debug)
+  ;; (hs-minor-mode t)
+  ;; (linum-mode t)
+  )
+(add-hook 'php-mode-hook 'my-php-mode)
+
+
 ;; flymake-php
 (require 'flymake-php)
 (add-hook 'php-mode-hook 'flymake-php-load)
