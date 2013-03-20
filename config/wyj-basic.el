@@ -61,6 +61,20 @@
 ;; (if wyj/os:windowsp
 ;;     (setq file-name-coding-system 'gb2312))
 
+;; Wed Mar 20 15:27:59 2013
+;; 为了解决在win下打开utf-8下编辑的文件显示为乱码的问题
+;; 参考资料http://blog.csdn.net/alivio/article/details/6897808
+(setq default-buffer-file-coding-system 'utf-8)
+;; 参考资料http://forum.ubuntu.org.cn/viewtopic.php?f=68&t=382841
+(prefer-coding-system 'cp950)
+(prefer-coding-system 'gb2312)
+(prefer-coding-system 'cp936)
+(prefer-coding-system 'gb18030)
+;(prefer-coding-system 'utf-16le-with-signature)
+(prefer-coding-system 'utf-16)
+(prefer-coding-system 'utf-8)
+
+
 ;; setup up a big kill-ring, so i will never miss anything:-)
 (setq kill-ring-max 100)
 
