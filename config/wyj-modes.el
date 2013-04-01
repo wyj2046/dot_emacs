@@ -77,7 +77,13 @@
   (c-set-offset 'arglist-cont 0)
   (c-set-offset 'arglist-intro '+)
   (c-set-offset 'case-label 2)
-  (c-set-offset 'arglist-close 0))
+  (c-set-offset 'arglist-close 0)
+  (setq php-manual-path "~/.emacs.d/plugins/php_manual")
+  (setq php-completion-file "~/.emacs.d/elpa/php-mode-1.5.0/php-completion-file")
+  (define-key php-mode-map
+    [(control tab)]
+    'php-complete-function)  
+  )
 (add-hook 'php-mode-hook 'wicked/php-mode-init)
 
 
