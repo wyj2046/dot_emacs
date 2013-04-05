@@ -19,11 +19,11 @@
 (defconst wyj/host:OFFICEp (string-equal system-name "SINA-PC")
   "if the current host is my SINA-PC")
 
-(defconst wyj/host:ubuntup (string-equal system-name "rapid-LIFEBOOK-LH532")
-  "if the current host is rapid-LIFEBOOK-LH532")
+(defconst wyj/host:ubuntup (string-equal system-name "rapid")
+  "if the current host is rapid")
 
-(defconst wyj/host:home_ubuntup (string-equal system-name "rapid-LIFEBOOK-LH532")
-  "if the current host is rapid-LIFEBOOK-LH532")
+(defconst wyj/host:home_ubuntup (string-equal system-name "rapid")
+  "if the current host is rapid")
 
 
 (defconst wyj/plugin:base-directory "~/.emacs.d/plugins"

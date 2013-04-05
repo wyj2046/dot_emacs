@@ -21,10 +21,10 @@
 
 ;; golden-ratio
 ;; https://github.com/roman/golden-ratio.el
-(add-to-list 'load-path "~/.emacs.d/el-get/golden-ratio")
-(require 'golden-ratio)
+;; (add-to-list 'load-path "~/.emacs.d/el-get/golden-ratio")
+;; (require 'golden-ratio)
 
-(golden-ratio-enable)
+;; (golden-ratio-enable)
 
 
 ;; jedi
