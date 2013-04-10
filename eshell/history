@@ -1,3 +1,7 @@
 uname -a
 cd /ssh:yujie6@219.142.78.199
 cd /ssh:yujie6@219.142.78.199:~
+cd ..
+pwd
+sudo apg-get install cloc
+sudo apt-get install cloc

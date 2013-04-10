@@ -2,7 +2,7 @@
 #name : pri ...(...)
 #group : definitions
 # --
-private function ${1:name}(${2:$args})
+private function ${1:name}($2)
 {
    $0
 }

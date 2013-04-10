@@ -80,6 +80,7 @@
   (c-set-offset 'arglist-close 0)
   (setq php-manual-path "~/.emacs.d/plugins/php_manual")
   (setq php-completion-file "~/.emacs.d/elpa/php-mode-1.5.0/php-completion-file")
+  (setq tags-file-name "~/project/recommend/TAGS") ;让emacs自动读取tag文件内容
   (define-key php-mode-map
     [(control tab)]
     'php-complete-function)  

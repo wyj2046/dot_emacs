@@ -2,7 +2,7 @@
 #name : pro ...(...)
 #group : definitions
 # --
-protected function ${1:name}(${2:$args})
+protected function ${1:name}($2)
 {
    $0
 }

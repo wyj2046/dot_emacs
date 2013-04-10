@@ -234,3 +234,36 @@ the mode-line."
 ;; http://ourcomments.org/Emacs/nXhtml/doc/nxhtml.html
 ;; (wyj/plugin:prepend-to-load-path "nxhtml")
 ;; (load "autostart.el")
+
+
+;; php-imenu
+;; Load the php-imenu index function
+(wyj/plugin:prepend-to-load-path "php-imenu")
+(autoload 'php-imenu-create-index "php-imenu" nil t)
+;; Add the index creation function to the php-mode-hook 
+;; In php-mode 1.2, it's php-mode-user-hook.  In 1.4, it's php-mode-hook.
+(add-hook 'php-mode-user-hook 'php-imenu-setup)
+(defun php-imenu-setup ()
+  (setq imenu-create-index-function (function php-imenu-create-index))
+  ;; uncomment if you prefer speedbar:
+					;(setq php-imenu-alist-postprocessor (function reverse))
+  (imenu-add-menubar-index)
+  )
+
+
+;; php-completion
+;; http://www.emacswiki.org/emacs/php-completion.el
+;; (add-hook 'php-mode-hook
+;;           (lambda ()
+;;             (require 'php-completion)
+;;             (php-completion-mode t)
+;;             (define-key php-mode-map (kbd "C-o") 'phpcmp-complete)))
+;; (add-hook  'php-mode-hook
+;;            (lambda ()
+;;              (when (require 'auto-complete nil t)
+;;                (make-variable-buffer-local 'ac-sources)
+;;                (add-to-list 'ac-sources 'ac-source-php-completion)
+;;                ;; if you like patial match,
+;;                ;; use `ac-source-php-completion-patial' instead of `ac-source-php-completion'.
+;;                ;; (add-to-list 'ac-sources 'ac-source-php-completion-patial)
+;;                (auto-complete-mode t))))
